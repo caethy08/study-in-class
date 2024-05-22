@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>간단 계산기</title>
+<script type="text/javascript">
+function add(char){
+	let display = document.getElementById('display');
+	display.value = display.value + char;
+}
+</script>
+<script type="text/javascript">
+let operatorOn = '';
+let prevNum = '';
+let nextNum = '';
+let calculator = (n1, operator, n2) => {
+		let result = 0;
+		switch (operator){
+		case '+':
+			result = Number(n1) + Number(n2);
+			break;
+		case '-':
+			result = Number(n1) - Number(n2);
+			break;
+		case '*':
+			result = Number(n1) * Number(n2);
+			break;
+		case '/':
+			result = Number(n1) / Number(n2);
+			break;
+		default:
+			break;
+	}
+	return String(result);
+}
+
+let calc = () => {
+	
+}
+</script>
+<script type="text/javascript">
+function reset(){
+	document.getElementById('display').value = "";
+	document.getElementById('result').value = "";
+}
+</script>
+<style>
+table {
+	border-collapse: collapse;
+}
+td {
+	padding: 5px 10px;
+	text-align: center;
+}
+input {
+	text-align: right;
+	border: none;
+}
+input:focus {
+	outline: none;
+}
+</style>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td colspan="4"><input type="text" id="display"
+				placeholder="display"></td>
+		</tr>
+		<tr>
+			<td colspan="4"><input type="text" id="result"
+				placeholder="result"></td>
+		</tr>
+		<tr>
+			<td colspan="3" onclick="reset()">AC</td>
+			<td class="operator" onclick="add(7)">/</td>
+		</tr>
+		<tr>
+			<td onclick="add(7)">7</td>
+			<td onclick="add(8)">8</td>
+			<td onclick="add(9)">9</td>
+			<td class="operator" onclick="add('*')">*</td>
+		</tr>
+		<tr>
+			<td onclick="add(4)">4</td>
+			<td onclick="add(5)">5</td>
+			<td onclick="add(6)">6</td>
+			<td class="operator" onclick="add('-')">-</td>
+		</tr>
+		<tr>
+			<td onclick="add(1)">1</td>
+			<td onclick="add(2)">2</td>
+			<td onclick="add(3)">3</td>
+			<td class="operator" onclick="add('+')">+</td>
+		</tr>
+		<tr>
+			<td colspan="2" onclick="add(0)">0</td>
+			<td onclick="add('.')">.</td>
+			<td onclick="add('=')" id = "res">=</td>
+		</tr>
+	</table>
+</body>
+</html>

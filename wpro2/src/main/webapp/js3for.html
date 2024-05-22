@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>반복문 for</h2>
+<script type="text/javascript">
+for(let a = 1; a <= 5; a++){
+	document.write(`a값은 ${a}<br>`);
+}
+//document.write(`for문을 벗어난 a값은 ${a}<br>`); //a는 지역변수이기 때문에 for문을 벗어나면 에러
+for(let a = 10; a >= 1; a -= 2){
+	document.write(`a값은 ${a}<br>`);
+}
+document.write('<br>');
+for(let a = 1; a <= 3; a++){
+	document.write(`a값은 ${a}&nbsp;&nbsp`);
+	for(let b = 1; b <= 4; b++){
+		document.write(`b값은 ${b}&nbsp;&nbsp`);
+	}
+	document.write('<br>');
+}
+
+document.write('<br>');
+for(let a = 1; a <=10; a++){
+	if(a === 3)continue;
+	if(a === 6)break;
+	document.write(`a값은 ${a} `);
+}
+
+</script>
+
+<h1>문제</h1>
+<script type="text/javascript">
+//문1) 1 ~ 100 사이의 정수 중 3의 배수의 합과 갯수 출력
+document.write('문제 1 <br>');
+
+sum = 0 ;
+count = 0;
+for(let a = 1; a <= 100; a++){
+	if(a % 3 === 0){
+		sum += a;
+		count ++
+	}
+}		
+	document.write("3의 배수의 합 : " + sum);		
+	document.write('<br>');
+	document.write("3의 배수의 개수 : " + count);	
+
+
+//문2) 1 ~ 1000 사이의 정수 중 2의 배수이나 5의 배수가 아닌 수의 합 출력
+//조건 : 숫자가 100을 넘으면 작업 중지(break)
+document.write('<br>');
+document.write('문제 2 <br>');
+
+sum = 0 ;
+for(let a = 1; a <= 1000; a++){
+	if(a % 2 === 0){
+		if(a % 5 === 0) continue;
+		sum += a;
+	}
+		if(a > 100) break;
+}	
+document.write("2의 배수이나 5의 배수가 아닌 수의 합 : " + sum);	
+
+
+
+//문3) 2 ~ 9단 까지의 구구단 출력.(table tag 사용. border='1')
+//조건: 각 단은 행으로 구분
+//조건: 짝수 단은 노랑으로 배경을 채운다. style적용(인라인 방식)
+
+document.write('<br>');
+document.write('문제 3 <br>');
+
+document.write('<table border = "1">');
+	
+for(let a = 2; a <= 9; a++){
+	if(a % 2 === 0){
+		document.write('<tr style="background-color:yellow"> '); 		
+	}
+	document.write('<td>'+ a + '단</td>');
+
+
+	for(let b = 1; b<= 9 ; b++){
+		document.write(`<td>${a}* ${b} = ${a*b}</td>`);
+	}
+		document.write('<tr>');
+		
+}
+document.write('</table>');
+
+</script>
+
+</body>
+</html>
