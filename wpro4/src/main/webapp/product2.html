@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload = () => {
+	document.querySelector("#btnOk").onclick = function() {
+		frm.submit();
+	}
+}
+</script>
+</head>
+<body>
+	<tr>
+		<td>
+			<img src="images/sangpum2.jpeg" width="80%">		
+			<pre>
+			여요 월백 도자기 개완 쉬는 냥이
+			
+			판매가	27,000원
+			상품코드	WAD2222053
+			브랜드	기헌
+			제조사	치슈엔타오츠꽁이유한공사
+			배송방법	택배
+			
+			상품명	여요 월백 도자기 개완 쉬는 냥이	
+			상품수	1
+			가격		27,000원
+			총 상품금액(수량) : 27,000원 (1개)
+			</pre>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<form action="Cart" name="frm" method="post">
+			<input type="hidden" name="name" value="여요 월백 도자기 개완 쉬는 냥이">
+			<input type="hidden" name="price" value="27000">
+			<input type="button" id="btnOk" value="장바구니에 상품 담기">
+			<input type="button" value="홈으로 이동" onclick="history.back()">
+			</form>
+		</td>	
+	</tr>
+</body>
+</html>

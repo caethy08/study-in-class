@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload = () => {
+	document.querySelector("#btnOk").onclick = function() {
+		frm.submit();
+	}
+}
+</script>
+</head>
+<body>
+<h2>성적 입력</h2>
+<form action="test_result" name="frm" method="post">
+"번호: " <input type="text" name="no" size="5" value="3"><br>
+"이름: " <input type="text" name="name" size="5" value="홍길동"><br>
+"국어: " <input type="text" name="kor" size="5" value="10"><br>
+"영어: " <input type="text" name="eng" size="5" value="10"><br>
+<input type="button" id="btnOk" value="등록">
+</form>
+</body>
+</html>

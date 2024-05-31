@@ -19,4 +19,9 @@
  	<url-pattern>dajeong</url-pattern>
   </servlet-mapping>
    --> 
+   <!-- 
+   <session-config>
+   	<session-timeout>60</session-timeout> //60초간 세션 유효. 그러나여기서 설정 시 전 파일들에 설정
+   </session-config>
+    -->
 </web-app>
