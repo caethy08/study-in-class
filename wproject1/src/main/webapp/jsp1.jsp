@@ -1,5 +1,5 @@
 <!-- 
-protected void service(HttpServletRequest request
+protected void service(HttpServletRequest request, HttpServletResponse response)
  아래 내용은 소스코드를 까보면 이 영역 내에 기술된다.
  -->
 <%@page import="java.util.Date"%>
