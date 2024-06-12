@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Data
 public class BoardDto {
-	private String name,pass,mail,title,count,bip,bdate;
+	private String name,pass,mail,title,cont,bip,bdate;
 	private int num,readcnt,gnum,onum,nested;
 	
 }

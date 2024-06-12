@@ -3,7 +3,7 @@
 <% request.setCharacterEncoding("utf-8"); %>
 <jsp:useBean id="bean" class="pack.board.BoardFormBean" />
 <jsp:setProperty property="*" name="bean"/>
-<jsp:useBean id="boardMgr" class="pack.board.BoardMgr"></jsp:useBean>
+<jsp:useBean id="boardMgr" class="pack.board.BoardMgr"/>
 
 <% 
 bean.setBip(request.getRemoteAddr());
