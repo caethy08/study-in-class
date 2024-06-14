@@ -32,7 +32,7 @@
   	<td><%=m.getName() %></td>
   	<td style="text-align: left;"><%=m.getEmail() %></td>
   	<td><%=m.getPhone() %></td>
-  	<td><a href="javascript:memUpdate('<%=m.getId()%>')">수정하기</a></td>
+  	<td><a href="javascript:memUpdate('<%=m.getId()%>')">수정하기</a></td> <%-- manupdate 함수 불러오면서 id를 가져감 --%>
   </tr>
   <%	  
   }
@@ -46,9 +46,3 @@
 </form>
 </body>
 </html>
-
-
-
-
-
-

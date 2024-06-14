@@ -9,7 +9,7 @@ request.setCharacterEncoding("utf-8");
 String id = (String)session.getAttribute("idkey");
 
 MemberBean bean = memberMgr.getMember(id);
-
+	
 if(bean == null){
 	response.sendRedirect("../guest/guest_index.jsp");
 	return;  //service 메소드를 탈출

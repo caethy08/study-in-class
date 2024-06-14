@@ -6,10 +6,10 @@
 
 <%
 request.setCharacterEncoding("utf-8");
-String id = request.getParameter("id");
+String id = request.getParameter("id"); //수정하기를 누르면 id값을 받아온다
 //out.print(id);
 
-MemberBean bean = memberMgr.getMember(id);
+MemberBean bean = memberMgr.getMember(id); 
 %>
 <!DOCTYPE html>
 <html>
