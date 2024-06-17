@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>상품 관리</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="../js/script.js"></script>
 </head>

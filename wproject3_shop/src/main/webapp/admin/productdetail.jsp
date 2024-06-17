@@ -53,11 +53,19 @@ ProductDto dto = productMgr.getProduct(no);
 	</tr>
 	<tr>
 		<td colspan="3" style="text-align: center;">
-			<a href="javascript:productUpdate()">수정하기</a>
-			<a href="javascript:productDelete()">삭제하기</a>
+			<a href="javascript:productUpdate('<%=dto.getNo()%>')">수정하기</a> <%-- 번호를 들고 가야한다 --%>
+			<a href="javascript:productDelete('<%=dto.getNo()%>')">삭제하기</a>
 		</td>
 	</tr>
 </table>
 <%@ include file="admin_bottom.jsp" %>
+
+<form action="productupdate.jsp" name = "updateForm" method="post">
+	<input type="hidden" name="no"> <%--//hidden no를 들고 productdetail.jsp로 이동  --%>
+</form>
+
+<form action="productproc.jsp?flag=delete" name = "delForm" method="post"> 
+	<input type="hidden" name="no"> <%--//hidden no를 들고 productdetail.jsp로 이동 get메소드의 경우 no만 이동하고 flag가 이동 x  --%>
+</form>
 </body>
 </html>
