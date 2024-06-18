@@ -116,11 +116,11 @@ function productDetail_guest(no){
 
 //카트 처리용
 function cartUpdate(form){
-	form.flag.value = "update";
+	form.flag.value ="update";
 	form.submit();
 }
 function cartDelete(form){
-	form.flag.value = "del";
+	form.flag.value ="del";
 	form.submit();
 }
 
