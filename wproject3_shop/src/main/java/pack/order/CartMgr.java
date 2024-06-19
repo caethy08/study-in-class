@@ -34,6 +34,7 @@ public class CartMgr {
 	}
 	
 public void deleteCart(OrderBean obean) {
-		
+		String product_no = obean.getProduct_no();
+		hCart.remove(product_no);
 	}
 }
