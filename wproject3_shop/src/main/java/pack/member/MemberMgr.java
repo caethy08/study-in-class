@@ -70,6 +70,7 @@ public class MemberMgr {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
+			if(rs.next()) b = true;
 		} catch (Exception e) {
 			System.out.println("idCheckProcess err : " + e);
 		} finally {
